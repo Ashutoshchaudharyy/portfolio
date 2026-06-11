@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashutosh Chaudhary — AI ML Engineer &amp; AI Enthusiast</title>
+  <meta name="description" content="Portfolio of Ashutosh Chaudhary — AI ML Engineer and Computer Science Student. Showcasing web development and AI/ML projects.">
+  <meta name="keywords" content="Ashutosh Chaudhary, AI ML Engineer, Portfolio, AI, ML, Web Developer, Computer Science">
+  <meta name="author" content="Ashutosh Chaudhary">
+  <meta property="og:title" content="Ashutosh Chaudhary — AI ML Engineer Portfolio">
+  <meta property="og:description" content="Explore my projects, skills, certifications, and experience.">
+  <meta property="og:type" content="website">
+  
+  <link rel="stylesheet" href="styles.css">
+  <!-- FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Devicon CDN for Tech Logos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <!-- Lucide CDN for Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-logo">
+      <!-- You can replace this image/me.jpeg with your own profile avatar -->
+      <img src="image/me.jpeg?v=4" alt="Avatar" class="nav-logo-img" onerror="this.src='https://placehold.co/100x100/0a0a1a/00ffdc?text=Avatar'">
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#hero" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav-overlay" id="mobileNav">
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close">&times;</button>
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <!-- Premium Shape Landing Hero Animated Background -->
+    <div class="shape-hero-bg">
+      <div class="elegant-shape shape-1"></div>
+      <div class="elegant-shape shape-2"></div>
+      <div class="elegant-shape shape-3"></div>
+      <div class="elegant-shape shape-4"></div>
+      <div class="elegant-shape shape-5"></div>
+      <div class="hero-dark-overlay"></div>
+      <div class="hero-gradient-overlay"></div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <span>Available for Internships</span>
+        </div>
+        <div class="hero-name-glow"></div>
+        <h1 class="hero-name">
+          Hi, I'm<br>
+          <!-- Swap with your own name -->
+          <span class="gradient-text">Ashutosh Chaudhary</span>
+        </h1>
+        <div class="hero-typing">
+          <span id="typingText"></span><span class="typing-cursor">|</span>
+        </div>
+        <p class="hero-description">
+          Passionate about crafting beautiful, performant web experiences and exploring the intersection of frontend development with AI/ML innovation.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-rocket"></i> View Projects
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-envelope"></i> Contact Me
+          </a>
+          <a href="#" class="btn btn-ghost">
+            <i class="fas fa-download"></i> Resume
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="code-header">
+          <div class="code-dot"></div>
+          <div class="code-dot"></div>
+          <div class="code-dot"></div>
+          <span>portfolio.js</span>
+        </div>
+        <div class="code-body">
+          <span class="comment">// Welcome to my portfolio</span><br>
+          <span class="key">const</span> <span class="str">developer</span> = <span class="bracket">{</span><br>
+          &nbsp;&nbsp;<span class="key">name</span>: <span class="str">"Ashutosh Chaudhary"</span>,<br>
+          &nbsp;&nbsp;<span class="key">role</span>: <span class="str">"AI ML Engineer"</span>,<br>
+          &nbsp;&nbsp;<span class="key">passion</span>: <span class="str">"AI/ML &amp; Web Dev"</span>,<br>
+          &nbsp;&nbsp;<span class="key">status</span>: <span class="str">"Open to Work"</span>,<br>
+          &nbsp;&nbsp;<span class="key">skills</span>: [<span class="str">"HTML"</span>, <span class="str">"CSS"</span>, <span class="str">"JS"</span>, <span class="str">"Python"</span>, <span class="str">"ML"</span>],<br>
+          &nbsp;&nbsp;<span class="key">goal</span>: <span class="str">"Build the future"</span><br>
+          <span class="bracket">}</span>;
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="about-futuristic">
+    <canvas id="aboutParticles" class="about-particles-canvas"></canvas>
+    <div class="container about-split">
+      <!-- Left Side: Profile Card -->
+      <div class="about-left reveal">
+        <div class="about-profile-card">
+          <div class="profile-avatar-wrapper">
+            <div class="profile-avatar-glow"></div>
+            <!-- Profile photo (Swap image/me.jpeg with your image) -->
+            <img src="image/me.jpeg?v=4" alt="Profile avatar" class="profile-avatar-img" onerror="this.src='https://placehold.co/300x300/0a0a1a/00ffdc?text=Avatar'">
+          </div>
+          <h3 class="profile-name">Ashutosh Chaudhary</h3>
+          <p class="profile-subtitle">Computer Science Student &amp; AI/ML Engineer</p>
+          <div class="profile-socials">
+            <a href="https://github.com/Ashutoshchaudharyy" target="_blank" class="profile-social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ashutosh-chaudhary" target="_blank" class="profile-social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:chaudharyashutosh0701@gmail.com" class="profile-social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="#" class="profile-social-icon" aria-label="Location"><i class="fas fa-map-marker-alt"></i></a>
+          </div>
+        </div>
+        <!-- Stats -->
+        <div class="about-stat-cards">
+          <div class="about-stat-card reveal">
+            <div class="about-stat-icon"><i class="fas fa-code"></i></div>
+            <div class="about-stat-info">
+              <span class="about-stat-number">5+</span>
+              <span class="about-stat-label">Projects Completed</span>
+            </div>
+          </div>
+          <div class="about-stat-card reveal">
+            <div class="about-stat-icon"><i class="fas fa-award"></i></div>
+            <div class="about-stat-info">
+              <span class="about-stat-number">5+</span>
+              <span class="about-stat-label">Certifications Earned</span>
+            </div>
+          </div>
+          <div class="about-stat-card reveal">
+            <div class="about-stat-icon"><i class="fas fa-layer-group"></i></div>
+            <div class="about-stat-info">
+              <span class="about-stat-number">8+</span>
+              <span class="about-stat-label">Skills &amp; Technologies</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side: About Content -->
+      <div class="about-right reveal">
+        <p class="section-overline">About Me</p>
+        <h2 class="about-heading">Hello! I'm <span class="gradient-text-about">Ashutosh</span> 👋</h2>
+        <p class="about-body">I'm a Computer Science student with a deep passion for <strong>Frontend Development</strong> and an ever-growing curiosity for <strong>AI/ML</strong>. I love transforming complex problems into simple, beautiful, and intuitive web interfaces.</p>
+        <p class="about-body">My journey in tech started with building small websites and has evolved into creating full-stack applications and AI-powered tools. I'm actively seeking <strong>web development internships</strong> where I can contribute to real-world projects and grow as a developer.</p>
+        <p class="about-body">When I'm not coding, you'll find me exploring new frameworks, contributing to open-source, or reading about the latest advancements in artificial intelligence.</p>
+        <div class="about-pills">
+          <span class="about-pill">🎨 Frontend Development</span>
+          <span class="about-pill">🌐 Web Development</span>
+          <span class="about-pill">🤖 AI/ML Projects</span>
+          <span class="about-pill">📱 Responsive Design</span>
+          <span class="about-pill">⚡ Performance</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-overline">My Toolkit</p>
+        <h2 class="section-title">Skills &amp; Technologies</h2>
+        <p class="section-subtitle">The tools and technologies I use to bring ideas to life.</p>
+      </div>
+      <div class="skills-grid">
+        <!-- 1. HTML5 -->
+        <div class="skill-card reveal html5-card" data-level="90">
+          <div class="skill-icon"><i class="devicon-html5-plain colored"></i></div>
+          <div class="skill-meta">
+            <span class="skill-name">HTML5</span>
+            <span class="skill-level">Advanced • 90%</span>
+          </div>
+          <div class="skill-subtitle">Semantic Markup & Structure</div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="--target-width: 90%"></div></div>
+        </div>
+
+        <!-- 2. CSS5 -->
+        <div class="skill-card reveal css5-card" data-level="85">
+          <div class="skill-icon"><i class="devicon-css3-plain colored"></i></div>
+          <div class="skill-meta">
+            <span class="skill-name">CSS5</span>
+            <span class="skill-level">Advanced • 85%</span>
+          </div>
+          <div class="skill-subtitle">Styling, Flexbox & Animations</div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="--target-width: 85%"></div></div>
+        </div>
+
+        <!-- 3. JavaScript -->
+        <div class="skill-card reveal js-card" data-level="80">
+          <div class="skill-icon"><i class="devicon-javascript-plain colored"></i></div>
+          <div class="skill-meta">
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-level">Intermediate • 80%</span>
+          </div>
+          <div class="skill-subtitle">ES6, DOM & Interactive UI</div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="--target-width: 80%"></div></div>
+        </div>
+
+        <!-- 4. Bootstrap -->
+        <div class="skill-card reveal bootstrap-card" data-level="80">
+          <div class="skill-icon"><i class="devicon-bootstrap-plain colored"></i></div>
+          <div class="skill-meta">
+            <span class="skill-name">Bootstrap</span>
+            <span class="skill-level">Intermediate • 80%</span>
+          </div>
+          <div class="skill-subtitle">Responsive UI Components</div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="--target-width: 80%"></div></div>
+        </div>
+
+        <!-- 5. Responsive Web Design -->
+        <div class="skill-card reveal responsive-card" data-level="90">
+          <div class="skill-icon"><i data-lucide="monitor-smartphone" class="lucide-icon"></i></div>
+          <div class="skill-meta">
+            <span class="skill-name">Responsive Web Design</span>
+            <span class="skill-level">Advanced • 90%</span>
+          </div>
+          <div class="skill-subtitle">Mobile-First & Adaptive Layouts</div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="--target-width: 90%"></div></div>
+        </div>
+
+        <!-- 6. Git & GitHub -->
+        <div class="skill-card reveal git-card" data-level="75">
+          <div class="skill-icon"><i class="devicon-github-original colored"></i></div>
+          <div class="skill-meta">
+            <span class="skill-name">Git & GitHub</span>
+            <span class="skill-level">Intermediate • 75%</span>
+          </div>
+          <div class="skill-subtitle">Version Control & Collaboration</div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="--target-width: 75%"></div></div>
+        </div>
+
+        <!-- 7. MySQL -->
+        <div class="skill-card reveal mysql-card" data-level="70">
+          <div class="skill-icon"><i class="devicon-mysql-plain colored"></i></div>
+          <div class="skill-meta">
+            <span class="skill-name">MySQL</span>
+            <span class="skill-level">Intermediate • 70%</span>
+          </div>
+          <div class="skill-subtitle">Database Management & Queries</div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="--target-width: 70%"></div></div>
+        </div>
+
+        <!-- 8. Python -->
+        <div class="skill-card reveal python-card" data-level="75">
+          <div class="skill-icon"><i class="devicon-python-plain colored"></i></div>
+          <div class="skill-meta">
+            <span class="skill-name">Python</span>
+            <span class="skill-level">Intermediate • 75%</span>
+          </div>
+          <div class="skill-subtitle">Scripting & Backend Fundamentals</div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="--target-width: 75%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-overline">Featured Work</p>
+        <h2 class="section-title">Projects I've Built</h2>
+        <p class="section-subtitle">A curated selection of projects showcasing my skills in frontend development and AI.</p>
+      </div>
+      <div class="projects-grid">
+        <!-- Project 1: Portfolio Website -->
+        <div class="project-card reveal proj-portfolio">
+          <div class="project-image-wrapper">
+            <div class="project-glow-bg"></div>
+            <div class="project-icon-large"><i data-lucide="globe" class="lucide-icon"></i></div>
+          </div>
+          <div class="project-content">
+            <div>
+              <div class="project-type">Web Development</div>
+              <h3 class="project-title">Portfolio Website</h3>
+              <p class="project-desc">Designed and developed a fully responsive personal portfolio website to showcase projects, technical skills, certifications, and achievements with a modern dark-themed UI and smooth interactive user experience.</p>
+            </div>
+            <div>
+              <div class="project-tech">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS5</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Responsive Design</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Ashutoshchaudharyy/portfolio" target="_blank" class="project-link github"><i class="fab fa-github"></i> Code</a>
+                <a href="#" class="project-link demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: UniSync.AI -->
+        <div class="project-card reveal proj-erp">
+          <div class="project-image-wrapper">
+            <div class="project-glow-bg"></div>
+            <div class="project-icon-large"><i data-lucide="layout-dashboard" class="lucide-icon"></i></div>
+          </div>
+          <div class="project-content">
+            <div>
+              <div class="project-type">Web Application / AI Assistant</div>
+              <h3 class="project-title">UniSync.AI</h3>
+              <p class="project-desc">Developed a smart ERP dashboard solution for college students with an integrated AI assistant for academic workflow management, attendance tracking, announcements, and productivity enhancement through a responsive interface.</p>
+            </div>
+            <div>
+              <div class="project-tech">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS5</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">MySQL</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Himanshu-GenAI/TEAM-ANARCHY" target="_blank" class="project-link github"><i class="fab fa-github"></i> Code</a>
+                <a href="https://team-anarchy-frontend-8hou-5l6dfbvkl.vercel.app/" target="_blank" class="project-link demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: MisInfoX -->
+        <div class="project-card reveal proj-misinfo">
+          <div class="project-image-wrapper">
+            <div class="project-glow-bg"></div>
+            <div class="project-icon-large"><i data-lucide="shield-check" class="lucide-icon"></i></div>
+          </div>
+          <div class="project-content">
+            <div>
+              <div class="project-type">Machine Learning / NLP</div>
+              <h3 class="project-title">MisInfoX</h3>
+              <p class="project-desc">Built a machine learning-based misinformation analysis system using Natural Language Processing (NLP) techniques to identify and classify misleading or false information through predictive analytical models.</p>
+            </div>
+            <div>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Machine Learning</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">Scikit-learn</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Himanshu-GenAI/MisinfoX" target="_blank" class="project-link github"><i class="fab fa-github"></i> Code</a>
+                <a href="https://misinfo-x.vercel.app/" target="_blank" class="project-link demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" class="experience-section">
+    <!-- Ambient background glow orbs -->
+    <div class="timeline-ambient-glow timeline-ambient-glow--1"></div>
+    <div class="timeline-ambient-glow timeline-ambient-glow--2"></div>
+
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-overline">My Journey</p>
+        <h2 class="section-title">Experience &amp; Timeline</h2>
+        <p class="section-subtitle">Key milestones in my technical journey.</p>
+      </div>
+      <div class="timeline" id="timeline">
+        <!-- Scroll-progress glowing line overlay -->
+        <div class="timeline-progress-track">
+          <div class="timeline-progress-fill" id="timelineProgressFill"></div>
+          <div class="timeline-progress-glow" id="timelineProgressGlow"></div>
+          <div class="timeline-shimmer"></div>
+        </div>
+
+        <!-- 1. Hackathon & Project Development -->
+        <div class="timeline-item reveal" data-slide-dir="left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2026 — Present</div>
+            <h3 class="timeline-title">Hackathon &amp; Project Development</h3>
+            <h4 class="timeline-subtitle">Technical Projects &amp; Collaboration</h4>
+            <p class="timeline-desc">Developed real-world projects including an ERP dashboard system for college workflow management and a machine learning-based misinformation detection platform through hackathons and collaborative project development.</p>
+          </div>
+        </div>
+
+        <!-- 2. AI/ML Project Development -->
+        <div class="timeline-item reveal" data-slide-dir="right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2026 — Present</div>
+            <h3 class="timeline-title">AI/ML Project Development</h3>
+            <h4 class="timeline-subtitle">Academic &amp; Personal Projects</h4>
+            <p class="timeline-desc">Building AI-powered applications including attention tracking systems and misinformation analysis tools using Python, OpenCV, machine learning concepts, and computer vision techniques.</p>
+          </div>
+        </div>
+
+        <!-- 3. B.Tech in Computer Science -->
+        <div class="timeline-item reveal" data-slide-dir="left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2025 — Present</div>
+            <h3 class="timeline-title">B.Tech in Computer Science (AI/ML)</h3>
+            <h4 class="timeline-subtitle">GLA University, Mathura</h4>
+            <p class="timeline-desc">Pursuing a B.Tech degree in Computer Science (AI/ML) with a focus on software development, web development, Python programming, databases, and artificial intelligence concepts.</p>
+          </div>
+        </div>
+
+        <!-- 4. Frontend Development Journey -->
+        <div class="timeline-item reveal" data-slide-dir="right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2024 — 2025</div>
+            <h3 class="timeline-title">Frontend Development Journey</h3>
+            <h4 class="timeline-subtitle">Self-Learning &amp; Web Projects</h4>
+            <p class="timeline-desc">Developed strong frontend development skills in HTML5, CSS3, JavaScript, Bootstrap, responsive web design, and Git/GitHub through hands-on projects and continuous practice.</p>
+          </div>
+        </div>
+
+        <!-- 5. Started Coding Journey -->
+        <div class="timeline-item reveal" data-slide-dir="left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2023</div>
+            <h3 class="timeline-title">Started Coding Journey</h3>
+            <h4 class="timeline-subtitle">Technical Learning</h4>
+            <p class="timeline-desc">Started learning programming fundamentals with Python and web development while building beginner-friendly projects and exploring modern technologies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATIONS ===== -->
+  <section id="certifications">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-overline">Credentials</p>
+        <h2 class="section-title">Certifications & Achievements</h2>
+        <p class="section-subtitle">Professional certifications and hackathon projects validating my technical expertise.</p>
+      </div>
+      <div class="certs-grid">
+
+        <!-- Card 1: Microsoft AZ-900 -->
+        <div class="cert-card reveal" data-cert-index="0">
+          <div class="cert-card-inner">
+            <div class="cert-icon-wrapper cert-icon--azure">
+              <i class="fas fa-cloud"></i>
+            </div>
+            <div class="cert-info">
+              <h4>Microsoft AZ-900: Azure Fundamentals</h4>
+              <p>Fundamental cloud certification covering Azure services, cloud concepts, security, pricing, virtual machines, storage, networking, and Azure architecture basics.</p>
+              <div class="cert-tag"><i class="fab fa-microsoft"></i> Microsoft / Azure</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: ITM Hackathon Project -->
+        <div class="cert-card reveal" data-cert-index="1">
+          <div class="cert-card-inner">
+            <div class="cert-icon-wrapper cert-icon--erp">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="cert-info">
+              <h4>ITM Hackathon Project</h4>
+              <p>Developed an ERP dashboard solution for colleges as a third-party service provider with responsive UI, workflow management, and dashboard analytics features.</p>
+              <div class="cert-tag"><i class="fas fa-trophy"></i> Hackathon / Web Development</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: VisionX – Misinformation Detection System -->
+        <div class="cert-card reveal" data-cert-index="2">
+          <div class="cert-card-inner">
+            <div class="cert-icon-wrapper cert-icon--nlp">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="cert-info">
+              <h4>VisionX – Misinformation Detection System</h4>
+              <p>Built a machine learning-based misinformation detection system using NLP concepts, data preprocessing, and prediction models for identifying false information.</p>
+              <div class="cert-tag"><i class="fas fa-search"></i> Machine Learning / NLP</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Tata GenAI Powered Data Analytics Job Simulation -->
+        <div class="cert-card reveal" data-cert-index="3">
+          <div class="cert-card-inner">
+            <div class="cert-icon-wrapper cert-icon--deloitte">
+              <i data-lucide="bar-chart-3"></i>
+            </div>
+            <div class="cert-info">
+              <h4>Tata GenAI Powered Data Analytics Job Simulation – Forage</h4>
+              <p>Completed Tata’s GenAI Powered Data Analytics Job Simulation on Forage involving exploratory data analysis, risk profiling, business report data storytelling, and AI-driven collections strategy.</p>
+              <div class="cert-tag"><i class="fas fa-chart-pie"></i> Tata / Data Analytics</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: DTU E-Summit'26 -->
+        <div class="cert-card reveal" data-cert-index="4">
+          <div class="cert-card-inner">
+            <div class="cert-icon-wrapper cert-icon--azure">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <div class="cert-info">
+              <h4>Execute 5.0, E-Summit'26 – DTU</h4>
+              <p>Participated in Execute 5.0 of E-Summit'26, the annual entrepreneurship summit organized by Delhi Technological University (DTU), New Delhi.</p>
+              <div class="cert-tag"><i class="fas fa-award"></i> DTU / E-Summit</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: IIT Roorkee Changethon -->
+        <div class="cert-card reveal" data-cert-index="5">
+          <div class="cert-card-inner">
+            <div class="cert-icon-wrapper cert-icon--ml">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="cert-info">
+              <h4>Changethon, National Social Summit 2026 – IIT Roorkee</h4>
+              <p>Participated in Changethon of the National Social Summit 2026, a social innovation hackathon organized by the Indian Institute of Technology (IIT), Roorkee.</p>
+              <div class="cert-tag"><i class="fas fa-award"></i> IIT Roorkee / Changethon</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7: IIT Delhi Campus Ambassador -->
+        <div class="cert-card reveal" data-cert-index="6">
+          <div class="cert-card-inner">
+            <div class="cert-icon-wrapper cert-icon--ai">
+              <i class="fas fa-bullhorn"></i>
+            </div>
+            <div class="cert-info">
+              <h4>Campus Ambassador, BECON '26 – IIT Delhi</h4>
+              <p>Recognized for outstanding dedication and contribution as a Campus Ambassador for BECON '26, the annual business conclave organized by EDC, IIT Delhi.</p>
+              <div class="cert-tag"><i class="fas fa-trophy"></i> IIT Delhi / BECON</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-overline">Get In Touch</p>
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-subtitle">Have a project in mind or want to discuss an internship opportunity? I'd love to hear from you.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Contact Information</h3>
+          <p>Feel free to reach out through any of the channels below. I'm always open to discussing new opportunities.</p>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-detail">
+              <div class="label">Email</div>
+              <div class="value"><a href="mailto:chaudharyashutosh0701@gmail.com">chaudharyashutosh0701@gmail.com</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+            <div class="contact-detail">
+              <div class="label">LinkedIn</div>
+              <div class="value"><a href="https://www.linkedin.com/in/ashutosh-chaudhary" target="_blank">linkedin.com/in/ashutosh-chaudhary</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-github"></i></div>
+            <div class="contact-detail">
+              <div class="label">GitHub</div>
+              <div class="value"><a href="https://github.com/Ashutoshchaudharyy" target="_blank">github.com/Ashutoshchaudharyy</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-detail">
+              <div class="label">Location</div>
+              <div class="value">India</div>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/Ashutoshchaudharyy" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ashutosh-chaudhary" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <!-- FormSubmit Configuration -->
+          <input type="hidden" name="_template" value="box">
+          <input type="hidden" name="_captcha" value="false">
+          <!-- Spam Honeypot -->
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          
+          <div class="form-group">
+            <input type="text" id="formName" name="from_name" placeholder="Your Name" required autocomplete="name">
+            <span class="form-error-msg" id="nameError">Name must be at least 2 characters.</span>
+          </div>
+          <div class="form-group">
+            <input type="email" id="formEmail" name="from_email" placeholder="Your Email" required autocomplete="email">
+            <span class="form-error-msg" id="emailError">Please enter a valid email address.</span>
+          </div>
+          <div class="form-group">
+            <input type="text" id="formSubject" name="subject" placeholder="Subject" required autocomplete="off">
+            <span class="form-error-msg" id="subjectError">Subject must be at least 3 characters.</span>
+          </div>
+          <div class="form-group">
+            <textarea id="formMessage" name="message" placeholder="Your Message" required autocomplete="off"></textarea>
+            <span class="form-error-msg" id="messageError">Message must be at least 10 characters.</span>
+          </div>
+          <button type="submit" class="btn btn-primary" id="formSubmitBtn" style="width:100%;justify-content:center">
+            <i class="fas fa-paper-plane" id="submitBtnIcon"></i> <span id="submitBtnText">Send Message</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="footer-text">© 2026 <span>Ashutosh Chaudhary</span>. Crafted with passion & code.</p>
+      <p class="footer-text">Designed with <span>♥</span> for the web.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Toast Notifications Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Certificate Modal -->
+  <div class="cert-modal" id="certModal">
+    <div class="cert-modal-overlay" id="certModalOverlay"></div>
+    <div class="cert-modal-content">
+      <button class="cert-modal-close" id="certModalClose" aria-label="Close modal">&times;</button>
+      <div class="cert-modal-img-container">
+        <img src="" alt="" id="certModalImg">
+        <div class="cert-modal-spinner" id="certModalSpinner"></div>
+      </div>
+      <h3 class="cert-modal-title" id="certModalTitle"></h3>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
